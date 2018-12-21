@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+   <html>
+   <head>
+       <title>hums</title><!-- site title-->
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="shortcut icon" href="" type="image/x-icon" /><!-- fav icon -->
+       <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+       <link rel="stylesheet" href="lib/css/bootstrap-rtl.css">
+       <link rel="stylesheet" href="lib/css/Animat.css">
+       <link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"><!-- font awesome-->
+       <link rel="stylesheet" type="text/css" href="lib/css/style.css"><!-- main style -->
+       <link rel="stylesheet" type="text/css" href="lib/css/responsive.css"><!-- responsive style -->
+       <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+   </head>
+   <body >
+     <!-- <audio src="sound.mp3" controls>
+
+     </audio> -->
+
+     <audio autoplay>
+     <source src="http://www.pacdv.com/sounds/interface_sound_effects/sound84.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+<!--***************************************** navBar section start************************************************************************-->
+      <!-- start wrapper -->
+      <div id="wrapper">
+        <!-- start content -->
+        <div id="content">
+<!--************************************************* navBar start *********************************************************************-->
+       <header>
+         <nav   class="navbar navbar-default navbar-inverse navbar-fixed-top">
+           <div class=" container">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal">تسجيل الدخول</a>
+           </div>
+  <!--***********************************************first  Modal start (تسجيل)************************************************************-->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <!--*** modal-dialog ****-->
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!--*** modal-header ****-->
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">تسجيل الدخول</h4>
+                    </div>
+                    <!--*** modal-body****-->
+                    <div class="modal-body">
+                    <!--**** form start ****-->
+                    <form method="POST" action="/account/login" id="formid">
+                      <div id="toerror"></div>
+                          <div class="form-group">
+                                <label class="col-form-label" style="color: #4C6788">الايميل</label>
+                                            <input type="email" name="email" class="form-control" placeholder="الايميل">
+                                                   </div>
+                                                   <div class="form-group">
+                                                       <label class="col-form-label" style="color: #4C6788">كلمة المرور</label>
+                                                       <input type="password" name="password" class="form-control"
+                                                              placeholder="كلمة المرور">
+                                                   </div>
+                                                   <div class="form-group">
+                                                               <input class="form-check-input" type="checkbox" name="remember"
+                                                                      id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                                               <label class="form-check-label" for="remember"
+                                                                      style="color: #4C6788">
+                                                                   تذكرني
+                                                               </label>
+                                                   </div>
+                                                   <a href="#" data-toggle="modal" data-target="#myModal2">نسيت كلمة المرور</a>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-default" data-dismiss="modal">اغلاق
+                                                       </button>
+                                                       <button style="background:#af0922;outline:none;" id="loginform"
+                                                               type="submit" class="btn btn-primary">تسجيل</button>
+                          </div>
+                       </form>
+                      <!--**** form end ****-->
+                    </div>
+                  <!--**** modal-footer ****-->
+                 </div>
+             </div>
+          </div>
+  <!--****************************************** first  Modal end **************************************************************************-->
+ <!--****************************************** second Modal start(نسيت كلمة المرور) *******************************************************-->
+                               <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                   <div class="modal-dialog" role="document">
+                                       <div class="modal-content">
+                                           <div class="modal-header">
+                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                           aria-hidden="true">&times;</span></button>
+                                               <h4 class="modal-title" id="myModalLabel">نسيت كلمة المرور</h4>
+                                           </div>
+                                           <div class="modal-body">
+                                               <form method="POST" action="/account/restpassord" id="restformid">
+
+                                                   <div id="toresterror">
+
+                                                   </div>
+                                                   <div class="form-group">
+                                                       <label style="color: #4C6788">الايميل</label>
+                                                       <input type="email" name="email" class="form-control"
+                                                              placeholder="الرجاء ادخال الايميل او رقم الهاتف">
+                                                   </div>
+                                                   <br><br>
+                                                   <button type="submit" id="restform" class="btn btn-primary">ارسال</button>
+                                               </form>
+                                           </div>
+
+                                       </div>
+                                   </div>
+                               </div>
+<!--****************************************** second Modal end **************************************************************************-->
+<!--****************************************** navBar continue **************************************************************************-->
+       <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav navbar-right">
+           <div class="two">
+           <img  style="width: 60px; height: 50px;border-image:3px;" src="lib/img/Asset%201.svg" alt="">
+           <!-- <a href="#">مركز العمل التنموي</a> -->
+           <!-- <p style="color:  #af0922;text-shadow: 6px 6px 4px white, 0 0 25px white, 0 0 10px white;color:#af0922;-webkit-text-fill-color:3px #af0922; -webkit-text-stroke-color:white ;-webkit-text-stroke-width: .35px;">مركز العمل التنموي معا</p> -->
+            <p class="lead " style=" color:#af0922;">مركز العمل التنموي معا</p>
+          </div>
+            <div class="one" style="display:none;">
+            <img  style="width: 60px; height: 50px;border-image:3px;" src="lib/img/Group%20124.svg" alt="">
+            <!-- <a href="#">مركز العمل التنموي</a> -->
+            <!-- <p style="color:  #af0922;text-shadow: 6px 6px 4px white, 0 0 25px white, 0 0 10px white;color:#af0922;-webkit-text-fill-color:3px #af0922; -webkit-text-stroke-color:white ;-webkit-text-stroke-width: .35px;">مركز العمل التنموي معا</p> -->
+             <p class="lead " style=" color:white;">مركز العمل التنموي معا</p>
+          </div>
+         </ul>
+         <ul class="nav navbar-nav navbar-right center">
+           <li><a href="#اتصل بنا">
+            اتصل بنا</a>
+           </li>
+           <li><a href="#من نحن">
+            من نحن </a>
+           </li>
+           <li><a href="#البحث">
+             البحث</a>
+           </li>
+           <li><a href="#تقديم الطلب">
+             تقديم الطلب</a>
+           </li>
+           <li><a href="#الصفحة الرئيسية">
+             الصفحة الرئيسية</a>
+           </ul>
+       </div>
+      <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+<!--**************************************************  الصفحة الرئيسية *****************************************************************-->
+    <div id ="الصفحة الرئيسية"> </div>
+      <div class="section welcome">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7 img-header">
+              <img style=" display:none;width:101%;margin-top:-10px;" class="img-bkg wow bounceInLeft" data-wow-duration="1.5s" data-wow-offset="200" data-wow-delay=".3s "src="lib/img/Group%20124.svg" alt="">
+
+              <img style="width:101%;margin-top:-10px;" class="img-bkg wow bounceInLeft" data-wow-duration="1.5s" data-wow-offset="200" data-wow-delay=".3s "src="lib/img/Group%20128.png" alt="">
+              <img style="width: 60%;left: -237px;" class="undraw wow bounceInDown" data-wow-duration="1.5s" data-wow-offset="200" data-wow-delay=".5s" src="lib/img/undraw_live_collaboration_2r4y.svg" alt="">
+
+            </div>
+            <div class="col-md-5 header-txt ">
+              <div class="wow bounceInRight" data-wow-duration="1.5s" data-wow-offset="200" data-wow-delay=".5s">
+                <h1>مرحبا بك</h1>
+                <p>معا لتقديم الخدمة على افضل وجه , لا تتردد في تقديم طلب بكل ما تحتاج</p>
+             </div>
+             <button class="wow bounceInRight shake" data-wow-duration="1.6s" data-wow-offset="100" data-wow-delay=".6s">تقديم طلب</button>
+           </div>
+         </div>
+       </div>
+    </div>
+<!--*********************************************************  خدماتنا ******************************************************************-->
+    <div id="تقديم الطلب"> </div>
+      <div class="section union" style="background:#ffffff;">
+        <section id="services" class="container text-center" >
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text text-center wow bounceIn" data-wow-duration="3s">خدماتنا <hr></h3>
+            </div>
+          </div>
+          <!--first row  -->
+          <div class="row">
+            <div class="col-md-3">
+            </div>
+            <style >
+              .card:hover{
+                background-color: #ffe7e7;
+              }
+            </style>
+            <!--*** first card (تقديم اقتراح) *****-->
+            <div class="col-md-4 wow bounceIn" >
+              <div class="card " >
+                <div class="box">
+                  <div class="img">
+                    <img src="lib/img/Group%20130.svg" >
+                  </div>
+                  <h2>تقديم اقتراح<br></h2>
+                  <p>. هذا النص هو مثال لنص يمكن ان يستبدل بنفس المساحة , لقد تم توليد هذا النص من مولد النص العربي , حيث يمكنك ان تولد مثل هذا النص</p>
+                </div>
+              </div>
+           </div>
+           <!--**** second card (تقديم شكوى) ***-->
+           <a href="form.html">
+             <div class="col-md-4 wow bounceIn">
+             <div class="card"  style="margin-bottom: 50px !important">
+               <div class="box">
+                 <div class="img">
+                   <img src="lib/img/Group%20129.svg">
+                 </div>
+                 <h2>تقديم شكوى</h2>
+                 <p> . هذا النص هو مثال لنص يمكن ان يستبدل بنفس المساحة , لقد تم توليد هذا النص من مولد النص العربي , حيث يمكنك ان تولد مثل هذا النص</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="col-md-1">
+        </div>
+     </div>
+     <!-- second row -->
+     <div class="row">
+       <div class="col-md-3">
+       </div>
+       <!--**** third card (تقديم شكر) ***-->
+       <div class="col-md-4 wow bounceIn">
+         <div class="card "  data-wow-delay=".5s" style="margin-bottom: 50px !important">
+           <div class="box">
+             <div class="img">
+               <img src="lib/img/Group%20131.svg">
+             </div>
+             <h2>تقديم شكر</h2>
+             <p> . هذا النص هو مثال لنص يمكن ان يستبدل بنفس المساحة , لقد تم توليد هذا النص من مولد النص العربي , حيث يمكنك ان تولد مثل هذا النص</p>
+          </div>
+        </div>
+      </div>
+      <!--**** fourth card (متابعة الشكاوي) ***-->
+      <div class="col-md-4 wow bounceIn" style="position: relative">
+        <div class="card " >
+          <div class="box">
+            <div class="img">
+              <img src="lib/img/Group%20132.svg">
+            </div>
+            <h2>متابعة الشكاوي</h2>
+            <p> . هذا النص هو مثال لنص يمكن ان يستبدل بنفس المساحة , لقد تم توليد هذا النص من مولد النص العربي , حيث يمكنك ان تولد مثل هذا النص</p>
+          </div>
+        </div>
+       </div>
+       <div class="col-md-1">
+        <img src="lib/img/Untitled-1.png" alt="" style="position: absolute; bottom: 90px; left: 90px">
+       </div>
+      </section>
+     </div>
+     <div id ="البحث"> </div>
+    </div>
+    <div id ="recent"> </div>
+    <div class="section recent">
+    </div>
+<!--***************************************************** من  نحن **********************************************************************-->
+    <div id ="من نحن"> </div>
+      <div class="section school">
+        <section id="about-us" class="container-fluid">
+          <div>
+            <p class="h3">من نحن</p>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <p class="lead text-center wow fadeOut" data-wow-delay=".25s" data-wow-offset="400" style=" font-size: 25px; padding-left: 70px; padding-top: 17%">نحن عبارة عن شركة تقوم بتقديم مجموعة من الخدمات الي المجتمع وايضا نقوم بمساعدة المستخدم من تقديم مقترحات خاصة به من خلال تقديم طلب خاص بالشكاوي او الاقتراحات .<br>ويمكنه من متابعة من خلال الموقع الالكتروني ومعرفة اخر التطورات الخاصة بطلبه</p>
+            </div>
+            <div class="col-md-7 wow bounceInRight"><img src="lib/img/undraw_team_spirit_hrr4%20(1).png" alt="" style="height: 58vh;float: right;width: 70%;padding-right: 10%;"></div>
+         </div>
+        </section>
+      </div>
+      <div id ="uwyo">
+      </div>
+      <div class="section uwyo">
+      </div>
+<!--************************************************* اتصل بنا ****************************************************************************-->
+      <div id ="اتصل بنا"> </div>
+       <div class="section contact">
+        <section style="background:white; " id="aaa" class="container-fluid">
+         <div class="contact_us text-center">
+           <div class="filds">
+             <div class="container">
+               <i class="fa fa-headphones fa-4x"></i>
+               <h1>اتصل بنا </h1>
+               <!--first div  -->
+               <div class="col-md-6  wow bounceInUp" data-wow-duration="3s" data-wow-offset="200">
+               <form role="form ">
+                 <form role="form">
+                 <div class="form-group mess">
+                   <textarea type="text" class="form-control input-lg Messgge" placeholder="الرسالة"></textarea>
+                </div>
+                <button style="background:#af0922;opacity:.8;" class="form-control input-lg btn btn-danger"> اتصل بنا</button>
+                </form>
+              </form>
+            </div>
+              <!--second div  -->
+            <div class="col-md-6 wow bounceInDown" data-wow-duration="2s" data-wow-offset="200">
+              <form role="form">
+               <div class="form-group">
+                 <input type="text" class="form-control input-lg" placeholder="الاسم">
+               </div>
+               <form role="form">
+                 <div class="form-group">
+                   <input type="text" class="form-control input-lg" placeholder="الايميل">
+                </div>
+               <form role="form">
+                 <div class="form-group">
+                   <input type="text" class="form-control input-lg" placeholder="رقم الهاتف">
+                 </div>
+              </form>
+           </div>
+           </div>
+         </div>
+       </div>
+     </section>
+     </div>
+     </div>
+     <div id ="site"> </div>
+      <div class="section site"></div>
+     </div>
+     <style>
+      @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700|Roboto:400,300italic,100italic,100,300,400italic,500,500italic,700,700italic,900,900italic);
+     </style>
+   </header>
+<!--************************************************************** start footer **************************************************-->
+       <footer class="container-fluid">
+       <div class="row top-footer">
+         <!--top  -->
+         <!-- first side -->
+           <div class="col-lg-3 address">
+             <p>العنوان غزة - شارع الثلاثيني</p>
+             <p> hamms@mail.com البريد الالكتروني</p>
+             <p>23907387 (02) الفاكس</p>
+           </div>
+           <!-- second side -->
+           <div class="col-lg-6 col-md-6 info">
+             <p> الهاتف 2558658 </p>
+             <p> رقم الجوال 059874689</p>
+             <p>الرقم المجاني 1800700500</p>
+          </div>
+          <!-- third side -->
+          <div class="col-lg-3  img-logo">
+            <span>مركز العمل التنموي معا</span>
+            <img src="lib/img/Group%20124.svg" alt="">
+          </div>
+          <!-- third side -->
+       </div>
+       <!--mbottom -->
+       <div class="row bottom-footer">
+         <div class="col-12">
+           <p>جميع الحقوق محفوظة &copy; 2018</p>
+         </div>
+       </div>
+       </footer>
+<!-- ************************************************* End footer ************************************************************* -->
+       </div>
+       <!-- End wrapper -->
+<!--*************************************************** functions ************************************************************* -->
+
+    <script src="lib/js/main.js"></script><!-- main js file -->
+       <script>
+           (function() {
+             $('a[href*=#]:not([href=#])').click(function() {
+               if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                 var target = $(this.hash);
+                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                 if (target.length) {
+                   $('html,body').animate({
+                     scrollTop: target.offset().top
+                   }, 1000);
+                   return false;
+                 }
+               }
+             });
+           });
+         </script>
+         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+          <script>
+            (function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+            $('html,body').animate({
+            scrollTop: target.offset().top}, 1000);
+            return false;
+            }
+          }
+        });
+      });
+    </script>
+    <!-- <script>
+    $(document).ready(function() {
+            // Transition effect for navbar
+            $(window).scroll(function() {
+              // checks if window is scrolled more than 500px, adds/removes solid class
+              if($(this).scrollTop() > 500) {
+                    $("#hiddenDiv").fadeIn(1000);
+              } else {
+                    $("#hiddenDiv").fadeOut(1000);
+              }
+            });
+            });
+      </script> -->
+      <script>
+          var scrollTop =0;
+          (window).scroll(function(){
+        scrollTop = $(window).scrollTop();
+        if (scrollTop > 300){
+            $('.navbar').addClass('solid');
+            // $('.backToTop').addClass ('visible');
+        }else if (scrollTop == 0){
+            $('.navbar').removeClass('solid');
+            // $('.backToTop').removeClass('visible');
+          }
+          });
+      </script>
+      <!-- <script>
+         // Transition effect for navbar
+           $(window).scroll(function() {
+             // checks if window is scrolled more than 500px, adds/removes solid class
+            if($(this).(scrollTop>0 ){
+                $('.nav').addClass('solid');
+           } else {
+                $('.nav').removeClass('solid');
+            }
+            });
+          });
+      </script> -->
+      <!-- <script>
+      var scrollTop =0;
+        $(window).scroll(function(){
+            scrollTop = $(window).scrollTop();
+            if (scrollTop > 0){
+                $('.navbar').addClass ('color');
+                // $('.backToTop').addClass ('visible');
+            }else if (scrollTop == 0){
+                $('.navbar').removeClass('color');
+                // $('.backToTop').removeClass('visible');
+            }
+        });
+        </script> -->
+<!--************************************************** Java script lib ***************************************************************-->
+       <script src="lib/js/jquery-2.1.4.min.js"></script><!-- main JQuery -->
+       <script src="lib/js/bootstrap.min.js"></script><!-- bootstrap js -->
+       <script src="lib/js/main.js"></script><!-- main js file -->
+       <script src="lib/js/wow.min.js"></script>
+
+       <script> new WOW().init(); </script>
+   </body>
+   </html>

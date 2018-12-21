@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="language" content="arbic">
+<meta name="language" content="English">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1256"> 
+
+  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href ="bootstrap-rtl.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+<nav  style="background-color:#be0517"  class="navbar  navbar-dark     navbar-expand-lg navbar-light navbar-fixed-top ">
+  <a class="navbar-brand" href="#"> <img src="MAN.jpg" width="50px" height="50px" ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav  ">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">الصفحة الرئيسة <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">تقديم طلب</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">البحث</a>
+      </li>
+	    <li class="nav-item">
+        <a class="nav-link" href="#">تسجيل الدخول</a>
+      </li>
+	    <li class="nav-item">
+        <a class="nav-link" href="#">الاتصال بنا</a>
+      </li>
+	 
+    </ul>
+   
+  </div>
+</nav>
+<div class="container">
+<br><br>
+<div class="row">
+<h3>تم الارسال </h3>
+</div>
+<br>
+<div class="row">
+<h6> لقد تم ارسال الطلب الخاص بكم ومرفق لكم المعلومات الخاصة بطلبكم</h6>
+</div>
+<br>
+
+
+ <table class="table table-bordered">
+    <thead>
+      <tr style="background-color:#af0922">
+        <th style="text-align: center;">رقم الطلب</th>
+        <th style="text-align: center;">الاسم الأول </th>
+        <th style="text-align: center;">اسم العائلة </th> 
+		<th style="text-align: center;">رقم الهوية </th> 
+		<th style="text-align: center;">نوع الطلب المقدم</th> 
+		<th style="text-align: center;">تاريخ الارسال </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color:white">
+        <td style="text-align: center;">{{$compliant->id}}</td>
+        <td style="text-align: center;">{{$compliant->citizen->first_name}}</td>
+        <td style="text-align: center;">{{$compliant->citizen->last_name}}</td> 
+		<td style="text-align: center;">{{$compliant->citizen->id_number}}</td>
+        <td style="text-align: center;">{{$compliant->category->name}}</td>
+        <td style="text-align: center;">{{$compliant->datee}}</td>
+      </tr>
+      <tr>
+        <td  colspan="7"  style="text-align:right;height:200px;width:200px;border:none; ">
+		
+		<h5>تفاصيل النموذج</h5><br>
+		<h5>عنوان الموضوع:{{$compliant->title}}</h5><br>
+		<h5>شرح الموضوع</h5><br>
+		<h6>
+            {{$compliant->content}}
+            
+		</h6>
+		
+		
+		
+		
+		
+		</td>
+   
+    
+      </tr>   
+	
+     
+    </tbody>
+	
+  </table>
+ 
+
+  <div class="form-group row" align="center">
+                           <div class="col-lg-4">
+                               
+           <button style="margin-right:;"   class="btn btn-primary"  > <a href="/editcompliant/{{$compliant->id}}"> السابق لتعديل الشكوى </a>	</button>		 
+
+         
+           
+                                        
+                                    </div>
+         <div class="col-lg-4">
+             
+              <a href="#"><button style="margin-right:482px;"   class="btn btn-primary"  >الرجوع الى الصفحة الرئيسية	</button>	</a>		 
+        
+           
+                                        
+                                    </div>
+                                </div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

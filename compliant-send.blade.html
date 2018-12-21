@@ -1,0 +1,379 @@
+  <!DOCTYPE html>
+  <html lang="ar" dir="rtl">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="" type="image/x-icon" /><!-- fav icon -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="lib/css/Animat.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"><!-- font awesome-->
+    <link rel="stylesheet" type="text/css" href="lib/css/style.css"><!-- main style -->
+    <link rel="stylesheet" type="text/css" href="lib/css/responsive.css"><!-- responsive style -->
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+  <!-- start wrapper -->
+  <div id="wrapper">
+  <!-- start content -->
+  <div id="content">
+
+<!--********************************************* navBar start *********************************************************************-->
+  <header>
+    <nav style ="background:#af0922;"class="navbar navbar-default navbar-inverse navbar-fixed-top">
+      <div class=" container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal">تسجيل الدخول</a>
+      </div>
+<!--****************************************************first Modal ***********************************************************************-->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!--*** modal-dialog ****-->
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <!--*** modal-header ****-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <!--*** modal-body****-->
+            <div class="modal-body">
+              <!--**** form start ****-->
+              <form>
+                <div class="form-group">
+                  <label >الايميل</label>
+                    <input type="email" class="form-control"  placeholder="الايميل">
+                  </div>
+                  <div class="form-group">
+                    <label>كلمة المروركلمة المرور</label>
+                    <input type="password" class="form-control" placeholder="كلمة المرور">
+                  </div>
+                  <a href="#" data-toggle="modal" data-target="#myModal2">نسيت كلمة المرور</a>
+               </form>
+               <!--**** form end ****-->
+           </div>
+           <!--**** modal-footer ****-->
+           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal">اغلاق</button>
+             <button type="button" class="btn btn-primary">تسجيل</button>
+           </div>
+         </div>
+       </div>
+     </div>
+  <!--******************************************* first Modal end ***********************************************************************-->
+  <!--******************************************* second Modal start*********************************************************************-->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label >الايميل</label>
+                  <input type="email" class="form-control"  placeholder="الرجاء ادخال الايميل او رقم الهاتف">
+                </div><br><br>
+                <p style="color:red;">ستصلك رسالة بعد قليل </p>
+                <button type="button" class="btn btn-primary">ارسال</button>
+             </form>
+          </div>
+         <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">اغلاق</button>
+          <button type="button" class="btn btn-primary">تسجيل</button>
+        </div>
+      </div>
+     </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul style="display:inline;"class="nav navbar-nav navbar-right">
+          <img style="width: 70px; height: 70px;padding:5px;"  src="lib/img/Group%20124.svg" alt="">
+          <span>مركز العمل التنموي معا</span>
+        <!-- <img style="width: 50px; height: 50px;" src="lib/img/Group%20124.svg" alt="">
+          <p style="color:white;" class="lead">مركز العمل التنموي معا</p> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right center">
+        <li><a  href="#اتصل بنا">
+          اتصل بنا</a>
+         </li>
+         <li><a  href="#من نحن">
+          من نحن </a>
+         </li>
+        <li><a  href="#البحث">
+          البحث</a>
+        </li>
+        <li><a href="#تقديم الطلب">
+          تقديم الطلب</a>
+        </li>
+        <li><a href="#الصفحة الرئيسية">
+            الصفحة الرئيسية</a>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+  </nav>
+<!--*******************************  الصفحة الرئيسية ******************************************-->
+  <div id ="الصفحة الرئيسية"> </div>
+<!--******************************  خدماتنا***************************************************-->
+  <div id="تقديم الطلب"> </div>
+<!--******************************  خدماتنا***************************************************-->
+  <div id ="البحث"> </div>
+  </div>
+  <div id ="recent"> </div>
+  <div class="section recent">
+  </div>
+  <div id ="من نحن"> </div>
+  <div id ="uwyo"> </div>
+  <div class="section uwyo">
+  </div>
+  <div id ="اتصل بنا"> </div>
+  <div id ="site"> </div>
+  <div class="section site">
+  </div>
+  </div>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700|Roboto:400,300italic,100italic,100,300,400italic,500,500italic,700,700italic,900,900italic);
+  </style>
+</header>
+<!--************************************************************ navb end************************************************-->
+<!--************************************************************ content of page start***********************************-->
+    <div class="container"><br><br>
+      <div class="row">
+        <h1 class="col-sm-7 wow bounceIn" style="color:#af0922;margin-top:120px;margin-left:23px;">تم الإرسال</h1><br><br><br><br>
+    </div><br>
+    <div class="row">
+    <h6> لقد تم ارسال الطلب الخاص بكم ومرفق لكم المعلومات الخاصة بطلبكم</h6>
+    </div>
+    <br>
+     <table class="table table-bordered">
+        <thead>
+          <tr style="background-color:#67647E">
+            <th style="text-align: center;color:#ffffff">رقم الطلب</th>
+            <th style="text-align: center;color:#ffffff">الاسم الأول </th>
+            <th style="text-align: center;color:#ffffff">اسم العائلة </th>
+    		    <th style="text-align: center;color:#ffffff">رقم الهوية </th>
+    		    <th style="text-align: center;color:#ffffff">نوع الطلب المقدم</th>
+    		    <th style="text-align: center;color:#ffffff">تاريخ الارسال </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color:white">
+            <td style="text-align: center;">{{$compliant->id}}</td>
+            <td style="text-align: center;">{{$compliant->citizen->first_name}}</td>
+            <td style="text-align: center;">{{$compliant->citizen->last_name}}</td>
+    		    <td style="text-align: center;">{{$compliant->citizen->id_number}}</td>
+            <td style="text-align: center;">{{$compliant->category->name}}</td>
+            <td style="text-align: center;">{{$compliant->datee}}</td>
+          </tr>
+          <tr>
+            <td colspan="7"  style="text-align:right;height:200px;width:200px;border:none; ">
+          		<h5>تفاصيل النموذج</h5><br>
+          		<h5>عنوان الموضوع:{{$compliant->title}}</h5><br>
+          		<h5>شرح الموضوع</h5><br>
+          		<h6>
+                      {{$compliant->content}}
+          		</h6>
+          		</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form-group row" align="center">
+            <div class="col-lg-4">
+              <button style="background-color:#67647E ;"   class="btn btn-primary"  > <a style="color:#ffffff;" href="/editcompliant/{{$compliant->id}}"> أخذ صورة عن الشكوى </a>	</button>
+              <button style="background-color:#A8A8A8;"   class="btn btn-primary"  > <a style="color:#af0922;text-decoration:none;" href="/editcompliant/{{$compliant->id}}">الرجوع إلى الصفحة الرئيسية </a>	</button>
+            </div>
+          </div>
+        </div>
+<!--*************************************************POPuP  **********************************************************************-->
+             <!--HTML  -->
+             <div class="container">
+
+             </div>
+             <!-- use this for popup-->
+             <div id="boxes">
+               <div style="top: 199.5px; left: 551.5px; display: none;color:#af0922;font-size:25px;" id="dialog" class="window">تم الإرسال بنجاح
+                 <div style="color:black;" id="lorem">
+                   <h6 style="margin-left:44px;font-size:18px " >لقد تم ارسال طلبكم بنجاح وسيتم الرد عليه في مدة أقصاها أسبوعين من تاريخ تقديم الطلب,</h6>
+                   <h6 style="margin-left:89px;font-size:18px"  >في حال لم تتلقى أي رد خلال هذه المدة</h6>
+                   <h6 style="margin-left:37px;font-size:13px"  > يمكنكم التواصل مع المركز من خلال أرقان التواصل الموجودة في الأسفل</h6>
+                   <h6 style="margin-left:130px;font-size:18px;"  >0598702780 - 0597860841</h6>
+                 </div>
+                 <div class="col-sm-4" style="text-align:left;" id="popupfoot"> <a href="http://webenlance.com/" class="close agree">موافق</a>   </div>
+               </div>
+               <div style="width: 1478px; font-size: 32pt; color:white; height:760px; display: none; opacity: 0.8;" id="mask"></div>
+             </div>
+             <!--CSS  -->
+             <style>
+                   #mask {
+                 position:absolute;
+                 left:0;
+                 top:0;
+                 z-index:9000;
+                 background-color:#000;
+                 display:none;
+               }
+               #boxes .window {
+                 position:absolute;
+                 left:0;
+                 top:0;
+                 width:440px;
+                 height:200px;
+                 display:none;
+                 z-index:9999;
+                 padding:20px;
+                 border-radius: 15px;
+                 text-align: center;
+               }
+               #boxes #dialog {
+                 width:450px;
+                 height:auto;
+                 padding:10px;
+                 background-color:#ffffff;
+                 font-family: 'Segoe UI Light', sans-serif;
+                 font-size: 15pt;
+               }
+               .maintext{
+                 text-align: center;
+                 font-family: "Segoe UI", sans-serif;
+                 text-decoration: none;
+               }
+               body{
+                 background: url('bg.jpg');
+               }
+               #lorem{
+               	font-family: "Segoe UI", sans-serif;
+               	font-size: 12pt;
+                 text-align: left;
+               }
+               #popupfoot{
+               	font-family: "Segoe UI", sans-serif;
+               	font-size: 16pt;
+                 padding: 10px 20px;
+               }
+               #popupfoot a{
+               	text-decoration: none;
+               }
+               .agree:hover{
+                 background-color: #D1D1D1;
+               }
+               .popupoption:hover{
+               	background-color:#D1D1D1;
+               	color: green;
+               }
+               .popupoption2:hover{
+
+               	color: red;
+               }
+             </style>
+             <!--java script  -->
+             <script>
+             var id = '#dialog';
+
+         		//Get the screen height and width
+         		var maskHeight = $(document).height();
+         		var maskWidth = $(window).width();
+
+         		//Set heigth and width to mask to fill up the whole screen
+         		$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+         		//transition effect
+         		$('#mask').fadeIn(500);
+         		$('#mask').fadeTo("slow",0.9);
+
+         		//Get the window height and width
+         		var winH = $(window).height();
+         		var winW = $(window).width();
+
+         		//Set the popup window to center
+         		$(id).css('top',  winH/2-$(id).height()/2);
+         		$(id).css('left', winW/2-$(id).width()/2);
+
+         		//transition effect
+         		$(id).fadeIn(2000);
+
+         	//if close button is clicked
+         	$('.window .close').click(function (e) {
+         		//Cancel the link behavior
+         		e.preventDefault();
+
+         		$('#mask').hide();
+         		$('.window').hide();
+         	});
+
+         	//if mask is clicked
+         	$('#mask').click(function () {
+         		$(this).hide();
+         		$('.window').hide();
+         	});
+
+             </script>
+<!--****************************************************** start footer **************************************************************-->
+       <footer style="margin-top:0px;padding-bottom:52px;"class="container-fluid">
+       <div class="row top-footer">
+          <!--first side  -->
+           <div class="col-lg-3 address">
+              <p>العنوان غزة - شارع الثلاثيني</p>
+              <p> hamms@mail.com البريد الالكتروني</p>
+              <p>23907387 (02) الفاكس</p>
+           </div>
+           <!--second side  -->
+           <div class="col-lg-6 col-md-6 info">
+              <p> الهاتف 2558658 </p>
+              <p> رقم الجوال 059874689</p>
+              <p>الرقم المجاني 1800700500</p>
+            </div>
+            <div class="col-lg-3  img-logo">
+              <span>مركز العمل التنموي معا</span>
+              <img src="lib/img/Group%20124.svg" alt="">
+            </div>
+        </div>
+       <div class="row bottom-footer">
+          <div class="col-12">
+            <p>جميع الحقوق محفوظة &copy; 2018</p>
+          </div>
+       </div>
+      </footer>
+<!-- *********************************************** End footer ********************************************************************-->
+<script>
+$(document).ready(function(){
+    $(".input").click(function(){
+        $("#div1").fadeIn(1000);
+    });
+});
+</script>
+
+<!--************************************************ function for tab ************************************************************* -->
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<!--  -->
+<script src="js/jquery3.3.1.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="lib/js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="language" content="arbic">
+<meta name="language" content="English">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1256">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href ="bootstrap-rtl.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+  <!--***************************************** navBar section start************************************************************************-->
+        <!-- start wrapper -->
+        <div id="wrapper">
+          <!-- start content -->
+          <div id="content">
+  <!--************************************************* navBar start *********************************************************************-->
+         <header>
+           <nav   class="navbar navbar-default navbar-inverse navbar-fixed-top">
+             <div class=" container">
+               <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                 </button>
+                 <a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal">تسجيل الدخول</a>
+             </div>
+             <!--***********************************************first  Modal start (تسجيل)************************************************************-->
+                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                     <!--*** modal-dialog ****-->
+                                     <div class="modal-dialog" role="document">
+                                         <div class="modal-content">
+                                             <!--*** modal-header ****-->
+                                             <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                             aria-hidden="true">&times;</span></button>
+                                                 <h4 class="modal-title" id="myModalLabel">تسجيل الدخول</h4>
+                                             </div>
+                                             <!--*** modal-body****-->
+                                             <div class="modal-body">
+                                                 <!--**** form start ****-->
+                                                 <form method="POST" action="/account/login" id="formid">
+
+                                                     <div id="toerror">
+
+                                                     </div>
+                                                     <div class="form-group">
+                                                         <label class="col-form-label" style="color: #4C6788">الايميل</label>
+                                                         <input type="email" name="email" class="form-control" placeholder="الايميل">
+                                                     </div>
+                                                     <div class="form-group">
+                                                         <label class="col-form-label" style="color: #4C6788">كلمة المرور</label>
+                                                         <input type="password" name="password" class="form-control"
+                                                                placeholder="كلمة المرور">
+                                                     </div>
+                                                     <div class="form-group">
+                                                                 <input class="form-check-input" type="checkbox" name="remember"
+                                                                        id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                                                 <label class="form-check-label" for="remember"
+                                                                        style="color: #4C6788">
+                                                                     تذكرني
+                                                                 </label>
+                                                     </div>
+                                                     <a href="#" data-toggle="modal" data-target="#myModal2">نسيت كلمة المرور</a>
+                                                     <div class="modal-footer">
+                                                         <button type="button" class="btn btn-default" data-dismiss="modal">اغلاق
+                                                         </button>
+                                                         <button style="background:#af0922;outline:none;" id="loginform"
+                                                                 type="submit" class="btn btn-primary">تسجيل
+                                                         </button>
+                                                     </div>
+                                                 </form>
+                                                 <!--**** form end ****-->
+                                             </div>
+                                             <!--**** modal-footer ****-->
+
+                                         </div>
+                                     </div>
+                                 </div>
+    <!--****************************************** first  Modal end **************************************************************************-->
+   <!--****************************************** second Modal start(نسيت كلمة المرور) *******************************************************-->
+                                 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                     <div class="modal-dialog" role="document">
+                                         <div class="modal-content">
+                                             <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                             aria-hidden="true">&times;</span></button>
+                                                 <h4 class="modal-title" id="myModalLabel">نسيت كلمة المرور</h4>
+                                             </div>
+                                             <div class="modal-body">
+                                                 <form method="POST" action="/account/restpassord" id="restformid">
+
+                                                     <div id="toresterror">
+
+                                                     </div>
+                                                     <div class="form-group">
+                                                         <label style="color: #4C6788">الايميل</label>
+                                                         <input type="email" name="email" class="form-control"
+                                                                placeholder="الرجاء ادخال الايميل او رقم الهاتف">
+                                                     </div>
+                                                     <br><br>
+                                                     <button type="submit" id="restform" class="btn btn-primary">ارسال</button>
+                                                 </form>
+                                             </div>
+
+                                         </div>
+                                     </div>
+                                 </div>
+  <!--****************************************** second Modal end **************************************************************************-->
+  <!--****************************************** navBar continue **************************************************************************-->
+         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav navbar-right">
+             <div class="two">
+             <img  style="width: 60px; height: 50px;border-image:3px;" src="lib/img/Asset%201.svg" alt="">
+             <!-- <a href="#">مركز العمل التنموي</a> -->
+             <!-- <p style="color:  #af0922;text-shadow: 6px 6px 4px white, 0 0 25px white, 0 0 10px white;color:#af0922;-webkit-text-fill-color:3px #af0922; -webkit-text-stroke-color:white ;-webkit-text-stroke-width: .35px;">مركز العمل التنموي معا</p> -->
+              <p class="lead " style=" color:#af0922;">مركز العمل التنموي معا</p>
+            </div>
+              <div class="one" style="display:none;">
+              <img  style="width: 60px; height: 50px;border-image:3px;" src="lib/img/Group%20124.svg" alt="">
+              <!-- <a href="#">مركز العمل التنموي</a> -->
+              <!-- <p style="color:  #af0922;text-shadow: 6px 6px 4px white, 0 0 25px white, 0 0 10px white;color:#af0922;-webkit-text-fill-color:3px #af0922; -webkit-text-stroke-color:white ;-webkit-text-stroke-width: .35px;">مركز العمل التنموي معا</p> -->
+               <p class="lead " style=" color:white;">مركز العمل التنموي معا</p>
+            </div>
+           </ul>
+           <ul class="nav navbar-nav navbar-right center">
+             <li><a href="#اتصل بنا">
+              اتصل بنا</a>
+             </li>
+             <li><a href="#من نحن">
+              من نحن </a>
+             </li>
+             <li><a href="#البحث">
+               البحث</a>
+             </li>
+             <li><a href="#تقديم الطلب">
+               تقديم الطلب</a>
+             </li>
+             <li><a href="#الصفحة الرئيسية">
+               الصفحة الرئيسية</a>
+             </ul>
+         </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+
+<div class="container">
+<br><br>
+<div class="row">
+<h3>���� �� ����� �������</h3>
+</div>
+<br>
+<div class="row">
+<h6>���� ����� ��� ��������� ���� ����� ������� ������ ������ ������ �������� �������� ������ �� ������ ����� ����� ���</h6>
+</div>
+ @if (count($errors) > 0)
+ <div class="alert alert-danger">
+ <ul>
+@foreach( $errors->all() as $error)
+<li style="float:right;">{{$error}}</li><br>
+@endforeach
+ </ul>
+</div>
+ @endif
+
+
+ <form   method="POST" class="form-horizontal" action="/addcitizenthak">
+         @csrf
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email"> ����� �����:</label>
+      <div class="col-sm-4">
+        <input value="{{ old('first_name') }}" type="text" class="form-control" id="email" placeholder="����� �����" name="first_name">
+      </div>
+
+       <label class="control-label col-sm-2" for="email">��� ����:</label>
+      <div class="col-sm-4">
+        <input value="{{ old('father_name') }}" type="text" class="form-control" id="email" placeholder="��� ����" name="father_name">
+      </div>
+
+    </div>
+     <br>
+     <br>
+
+           <div class="form-group">
+      <label class="control-label col-sm-2" for="email">��� ����:</label>
+      <div class="col-sm-4">
+        <input value="{{ old('grandfather_name') }}" type="text" class="form-control" id="email" placeholder="��� ����" name="grandfather_name" required>
+      </div>
+
+       <label class="control-label col-sm-2" for="email">��� ������� :</label>
+      <div class="col-sm-4">
+        <input value="{{ old('last_name') }}" type="text" class="form-control" id="email" placeholder="��� �������" name="last_name">
+      </div>
+
+    </div>
+      <br>
+     <br>
+         <div class="form-group">
+      <label class="control-label col-sm-2" for="email">������� :</label>
+      <div class="col-sm-4">
+        <input value="{{ old('email') }}" type="email" class="form-control" id="email" placeholder="�������" name="email">
+      </div>
+
+       <label style="font-size:16px;" class="control-label col-sm-2" for="email"> ��� ������/���� �����:</label>
+      <div class="col-sm-4">
+        <input value="{{ old('id_number') }}" type="number" class="form-control" id="email" placeholder="���� ��� ������" name="id_number">
+      </div>
+	     </div>
+
+    <br>
+  <br>
+
+     <div class="form-group">
+	     <label class="control-label col-sm-2" for="email"> ��� ������� :</label>
+      <div class="col-sm-4">
+        <input value="{{ old('mobile') }}" type="number" class="form-control" id="email" placeholder="���� ��� ������" name="mobile">
+      </div>
+
+
+
+
+
+
+      <label class="control-label col-sm-2" for="email">��������:</label>
+      <div class="col-sm-4">
+    <select value="{{ old('governorate') }}" class="form-control" id="sel1" name="governorate">
+        <option>���</option>
+        <option>������</option>
+        <option>������</option>
+       </select>
+	   </div>
+         </div>
+       <br>
+  <br>
+
+          <div class="form-group">
+	   <label class="control-label col-sm-2" for="email">�������:</label>
+	   <div class="col-sm-4">
+   <input value="{{ old('city') }}" type="text" class="form-control" id="email" placeholder="���� ��� �������" name="city">
+	   </div>
+
+
+
+
+
+
+      <label class="control-label col-sm-2" for="email">�������:</label>
+      <div class="col-sm-4">
+        <input value="{{ old('street') }}" type="text" class="form-control" id="email" placeholder="���� ������� ��������" name="street">
+      </div>
+
+
+    </div>
+
+	 <br>
+  <br>
+  <br>
+
+
+
+
+
+
+     <div class="form-group row" align="center">
+                                    <label   class="col-lg-1 col-form-label form-control-label"></label>
+                                    <div class="col-lg-11">
+									<input type="submit" class="btn btn-primary" value="�������� ������ ������� ">
+
+
+                                    </div>
+                                </div>
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="" type="image/x-icon"/><!-- fav icon -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="lib/css/Animat.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"><!-- font awesome-->
+    <link rel="stylesheet" type="text/css" href="lib/css/style.css"><!-- main style -->
+    <link rel="stylesheet" type="text/css" href="lib/css/responsive.css"><!-- responsive style -->
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- start wrapper -->
+<div id="wrapper">
+    <!-- start content -->
+    <div id="content">
+
+        <!--********************************************* navBar start *********************************************************************-->
+        <header>
+            <nav style="background:#af0922;" class="navbar navbar-default navbar-inverse navbar-fixed-top">
+                <div class=" container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                            <a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal">تسجيل الدخول</a>
+
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul style="display:inline;" class="nav navbar-nav navbar-right">
+                            <img style="width: 70px; height: 70px;padding:5px;" src="lib/img/Group%20124.svg" alt="">
+                            <span>مركز العمل التنموي معا</span>
+                            <!-- <img style="width: 50px; height: 50px;" src="lib/img/Group%20124.svg" alt="">
+                              <p style="color:white;" class="lead">مركز العمل التنموي معا</p> -->
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right center">
+                            <li><a href="#اتصل بنا">
+                                    اتصل بنا</a>
+                            </li>
+                            <li><a href="#من نحن">
+                                    من نحن </a>
+                            </li>
+                            <li><a href="#البحث">
+                                    البحث</a>
+                            </li>
+                            <li><a href="#تقديم الطلب">
+                                    تقديم الطلب</a>
+                            </li>
+                            <li><a href="#الصفحة الرئيسية">
+                                    الصفحة الرئيسية</a>
+                        </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+    </div>
+    <div id="recent"></div>
+    <div class="section recent">
+    </div>
+    <div id="من نحن"></div>
+    <div id="uwyo"></div>
+    <div class="section uwyo">
+    </div>
+    <div id="اتصل بنا"></div>
+    <div id="site"></div>
+    <div class="section site">
+    </div>
+</div>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700|Roboto:400,300italic,100italic,100,300,400italic,500,500italic,700,700italic,900,900italic);
+</style>
+</header>
+<!--************************************************************ navb end*****************************************************************-->
+<!--************************************************************* tab start **************************************************************-->
+<style>
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 800px;
+        text-align: center;
+        margin-left: -100px;
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: right;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+<div class=" container">
+    <h2 style="margin-top:80px;margin-bottom:30px;color:#af0922;">متابعة شكوى</h2>
+    <!--***** first tab *****-->
+    <div class="tab wow bounceIn">
+        <div id="London" class="" style="direction:rtl;text-align:right; margin: 5px;padding: 5px">
+            <h3>شكوى : 155</h3>
+            <p>إسم المشروع: مشروع تحلية المياه</p>
+            <p>فئة الشكوى: شكاوي مالية</p>
+
+            <p>
+                المواطن: محمد أحمد محمود</p>
+            <p>طريقة الإرسال: عبر الزيارة</p>
+            <p>محتوى محتوى محتوى محتوى  محتوى محتوى محتوى محتوى  محتوى محتوى محتوى محتوى
+			محتوى محتوى محتوى محتوى محتوى محتوى محتوى محتوى  محتوى محتوى محتوى محتوى
+			محتوى محتوى محتوى محتوى </p>
+        </div>
+    </div>
+    <!------------->
+
+
+
+    <!--***** second tab *****-->
+    <div class="tab ">
+        <button class="tablinks">  الردود 2:</button>
+        <div id="Paris" class="tabcontent">
+            <br><br><hr style="border:1px solid #CCC">
+
+                <div style="direction:rtl;text-align:right;"> <h4
+                            style="direction:rtl;text-align:right;"> ردك مقبول</h4>
+            <p style="direction:rtl;text-align:right;">المدير محمد صالح 12-2-2018
+            </p>
+           </div>
+                <br><hr style="border:1px solid #CCC">
+
+                        <form method="post" action="/account/form/addreplay/{{$item->id}}">
+
+                            <label >إضافة رد جديد</label><br><br>
+                            <textarea name="response" rows="8" cols="80"></textarea><br>
+                            <input type="submit" value="إرسال الرد">
+                        </form>
+                    <form method="post" action="/account/form/addreplay/{{$item->id}}">
+
+                        <label >إضافة رد جديد</label><br><br>
+                        <textarea name="response" rows="8" cols="80"></textarea><br>
+                        <input type="submit" value="إرسال الرد">
+                    </form>
+
+        </div>
+
+    </div>
+
+    <!--***** third tab *****-->
+    <div class="tab tab col-sm-5" style="margin-left:500px;margin-top:5px;" >
+      <button class="tablinks" >المتابعات</button>
+        <div style="width:500px;height:20px;background-color:#af0922;color:white;margin-left:-20px;margin-left:20px;margin-top:50px;">أعد المحاولة </div>
+        <h3>هل تم حل شكواك ؟</h3>
+        <form>
+          <input class="input" type="radio" name="n">نعم
+          <div id="div1" style="width:805px;height:80px;display:none;">
+            <h4>مدى الرضا:</h4>
+            <input type="radio" name="per" value="راضي"> راضي
+            <input type="radio" name="per" value="راضي بشكل متوسط"> راضي بشكل متوسط
+            <input type="radio" name="per" value="غير راضي"> غير راض
+          </div>
+          <br><br>
+           <input class="fadeOut " name="n" type="radio" >لا
+           <span class="checkmark"></span>
+           <br><br>
+           <div style="display:none;" id="appear">
+           <textarea name="name" rows="8" cols="80" placeholder=" الرجاء وصف المشكلة مرة أخرى"></textarea><br><br>
+         </div>
+           <input type="submit" value="إرسال الرد">
+            </form>
+        </div>
+    </div>
+    <div  style="direction:rtl;text-align:right; margin: 5px;padding: 5px">
+        <a target="_blank" href="/account/form/printshow/{{$item->id}}" class="btn btn-success"> طباعة
+            <i
+                    class="glyphicon glyphicon-print"></i></a>
+
+            <a href="/account/form" class="btn btn-light">الغاء الامر</a>
+
+                    <a href="/account/form/terminateform/{{$item->id}}" class="btn btn-success">إيقاف الشكوى</a>
+
+    </div>
+</div>
+<!--****************************************************** start footer **************************************************************-->
+<footer style="margin-top:50px;padding-bottom:52px;" class="container-fluid">
+    <div class="row top-footer">
+        <!--first side  -->
+        <div class="col-lg-3 address">
+            <p>العنوان غزة - شارع الثلاثيني</p>
+            <p> hamms@mail.com البريد الالكتروني</p>
+            <p>23907387 (02) الفاكس</p>
+        </div>
+        <!--second side  -->
+        <div class="col-lg-6 col-md-6 info">
+            <p> الهاتف 2558658 </p>
+            <p> رقم الجوال 059874689</p>
+            <p>الرقم المجاني 1800700500</p>
+        </div>
+        <div class="col-lg-3  img-logo">
+            <span>مركز العمل التنموي معا</span>
+            <img src="lib/img/Group%20124.svg" alt="">
+        </div>
+    </div>
+    <div class="row bottom-footer">
+        <div class="col-12">
+            <p>جميع الحقوق محفوظة &copy; 2018</p>
+        </div>
+    </div>
+</footer>
+<!-- *********************************************** End footer ********************************************************************-->
+<script>
+    $(document).ready(function () {
+        $(".input").click(function () {
+            $("#div1").fadeIn(1000);
+        });
+    });
+</script>
+
+<!--************************************************ function for tab ************************************************************* -->
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+<!--  -->
+<script src="/js/jquery3.3.1.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="lib/js/main.js"></script>
+
+</body>
+</html>
